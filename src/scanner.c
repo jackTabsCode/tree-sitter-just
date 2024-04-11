@@ -24,21 +24,10 @@
 
 #ifdef DEBUG_PRINT
 #define dbg_print(...)                                                         \
-  do {                                                                         \
-    fprintf(stderr, "    \033[96;1mparse: \033[0m");                           \
-    fprintf(stderr, __VA_ARGS__);                                              \
-  } while (0)
-#else
 #define dbg_print(...)
 #endif
 
 #define panic(...)                                                             \
-  do {                                                                         \
-    fprintf(stderr, "panic at %s:%d: ", __FILE_NAME__, __LINE__);              \
-    fprintf(stderr, __VA_ARGS__);                                              \
-    fprintf(stderr, "\n");                                                     \
-    exit(1);                                                                   \
-  } while (0);
 
 #define assertf(condition, ...)                                                \
   do {                                                                         \
